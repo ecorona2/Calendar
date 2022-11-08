@@ -1,16 +1,15 @@
 import { Routes, Route } from "react-router-dom";
+import CalendarView from "./pages/CalendarView";
+import NotFound from "./pages/NotFound.jsx";
 
 function App() {
   return (
       <Routes>
-          <Route
-              path="/Calendar/"
-              element={
-                  <h1>Welcome to the Calendar!</h1>
-              }
-          />
+          <Route path="/Calendar/" element={
+              <CalendarView/>
+          } />
           <Route path="*" element={
-              <h1>Page was not found!</h1>
+              <NotFound/>
           } />
       </Routes>
   )
